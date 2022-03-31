@@ -73,8 +73,8 @@ img {
 .card {
   flex-grow: 1;
   width: calc((100% / 5) - 20px);
-  min-height: 210px;
-  padding: 10px;
+  min-height: 240px;
+  padding: 12px;
   text-align: center;
   user-select: none;
   cursor: pointer;

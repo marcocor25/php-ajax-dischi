@@ -25,13 +25,6 @@ include './database.php';
             </figure>
         </div>
         <div class="main">
-            <select name="genre" id="select-genre">
-                <option value="0" selected disabled>generi</option>
-                <option value="1">rock</option>
-                <option value="2">jazz</option>
-                <option value="3">metal</option>
-                <option value="4">pop</option>
-            </select>
             <div class="container">
 
                 <?php
