@@ -15,24 +15,28 @@
     <div id="app">
       <!-- HEADER -->
       <div class="header">
+        <!-- LOGO -->
         <figure class="logo">
           <img src="./img/logo.png" alt="Spotify" />
         </figure>
+        <!-- SELECTION WRAPPER-->
+        <div class="selection-wrapper">
+          <!-- SELECTION -->
+          <select name="genre" id="select-genre">
+            <!-- OPTIONS -->
+            <option
+              v-for="el in options"
+              :value="el.value"
+              :selected="el.selected"
+              :disabled="el.disabled"
+            >
+              {{el.text}}
+            </option>
+          </select>
+        </div>
       </div>
       <!-- MAIN -->
       <div class="main">
-        <!-- SELECTION -->
-        <select name="genre" id="select-genre">
-          <!-- OPTIONS -->
-          <option
-            v-for="el in options"
-            :value="el.value"
-            :selected="el.selected"
-            :disabled="el.disabled"
-          >
-            {{el.text}}
-          </option>
-        </select>
         <!-- CONTAINER -->
         <div class="container">
           <!-- CARDS -->
