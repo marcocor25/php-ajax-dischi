@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="shortcut icon" href="./img/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>PHP Dischi</title>
+  </head>
+  <body>
+    <!-- APP -->
+    <div id="app">
+      <!-- HEADER -->
+      <div class="header">
+        <figure class="logo">
+          <img src="./img/logo.png" alt="Spotify" />
+        </figure>
+      </div>
+      <!-- MAIN -->
+      <div class="main">
+        <!-- SELECTION -->
+        <select name="genre" id="select-genre">
+          <!-- OPTIONS -->
+          <option
+            v-for="el in options"
+            :value="el.value"
+            :selected="el.selected"
+            :disabled="el.disabled"
+          >
+            {{el.text}}
+          </option>
+        </select>
+        <!-- CONTAINER -->
+        <div class="container">
+          <!-- CARDS -->
+          <div class="card" v-for="el in disc">
+            <figure class="card-image">
+              <img :src="el.poster" :alt="el.title" />
+            </figure>
+            <h6>{{el.title}}</h6>
+            <p>{{el.author}}</p>
+            <p>{{el.year}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPT -->
+    <script src="./app.js"></script>
+  </body>
+</html>
