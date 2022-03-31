@@ -72,3 +72,7 @@ $disc = [
         'year' => '1987'
     ]
 ];
+
+header('Content-Type: appplication/json');
+
+echo json_encode($disc);

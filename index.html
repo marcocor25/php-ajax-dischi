@@ -13,92 +13,29 @@
   <body>
     <!-- APP -->
     <div id="app">
+      <!-- HEADER -->
       <div class="header">
         <figure class="logo">
           <img src="./img/logo.png" alt="Spotify" />
         </figure>
       </div>
+      <!-- MAIN -->
       <div class="main">
+        <!-- SELECTION -->
         <select name="genre" id="select-genre">
-          <option value="0" selected disabled>generi</option>
-          <option value="1">rock</option>
-          <option value="2">jazz</option>
-          <option value="3">metal</option>
-          <option value="4">pop</option>
+          <!-- OPTIONS -->
+          <option
+            v-for="el in options"
+            :value="el.value"
+            :selected="el.selected"
+            :disabled="el.disabled"
+          >
+            {{el.text}}
+          </option>
         </select>
+        <!-- CONTAINER -->
         <div class="container">
-          <div class="card">
-            <figure class="card-image">
-              <img src="" alt="" />
-            </figure>
-            <h6>text</h6>
-            <p>text</p>
-            <p>text</p>
-          </div>
-          <div class="card">
-            <figure class="card-image">
-              <img src="" alt="" />
-            </figure>
-            <h6>text</h6>
-            <p>text</p>
-            <p>text</p>
-          </div>
-          <div class="card">
-            <figure class="card-image">
-              <img src="" alt="" />
-            </figure>
-            <h6>text</h6>
-            <p>text</p>
-            <p>text</p>
-          </div>
-          <div class="card">
-            <figure class="card-image">
-              <img src="" alt="" />
-            </figure>
-            <h6>text</h6>
-            <p>text</p>
-            <p>text</p>
-          </div>
-          <div class="card">
-            <figure class="card-image">
-              <img src="" alt="" />
-            </figure>
-            <h6>text</h6>
-            <p>text</p>
-            <p>text</p>
-          </div>
-          <div class="card">
-            <figure class="card-image">
-              <img src="" alt="" />
-            </figure>
-            <h6>text</h6>
-            <p>text</p>
-            <p>text</p>
-          </div>
-          <div class="card">
-            <figure class="card-image">
-              <img src="" alt="" />
-            </figure>
-            <h6>text</h6>
-            <p>text</p>
-            <p>text</p>
-          </div>
-          <div class="card">
-            <figure class="card-image">
-              <img src="" alt="" />
-            </figure>
-            <h6>text</h6>
-            <p>text</p>
-            <p>text</p>
-          </div>
-          <div class="card">
-            <figure class="card-image">
-              <img src="" alt="" />
-            </figure>
-            <h6>text</h6>
-            <p>text</p>
-            <p>text</p>
-          </div>
+          <!-- CARDS -->
           <div class="card">
             <figure class="card-image">
               <img src="" alt="" />
