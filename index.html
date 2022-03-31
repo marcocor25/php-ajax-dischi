@@ -38,11 +38,11 @@
           <!-- CARDS -->
           <div class="card" v-for="el in disc">
             <figure class="card-image">
-              <img src="" alt="" />
+              <img :src="el.poster" :alt="el.title" />
             </figure>
-            <h6>text</h6>
-            <p>text</p>
-            <p>text</p>
+            <h6>{{el.title}}</h6>
+            <p>{{el.author}}</p>
+            <p>{{el.year}}</p>
           </div>
         </div>
       </div>
