@@ -34,9 +34,15 @@ const app = new Vue({
         text: "pop",
       },
     ],
+    disc: [],
+  },
+  created() {
+    axios.get("./database.php").then((res) => {
+      this.disc = res.data;
+      console.log(this.disc);
+    });
   },
   methods: {},
-  created() {},
 });
 
 console.log(app);
